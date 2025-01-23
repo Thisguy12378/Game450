@@ -21,7 +21,18 @@ import itertools
 def best_hand(hand):
     "From a 7-card hand, return the best 5 card hand."
     # Your code here
-    pass
+    hand5 = itertools.combinations(hand, 5)
+    
+    best = (0, 0, 0)
+    
+    for x in hand5:
+        test = hand_rank(x)
+        if test > best:
+            best = test
+            bestHand = x
+
+    return bestHand
+    
     
 # ------------------
 # Provided Functions
@@ -34,9 +45,9 @@ def hand_rank(hand):
     "Return a value indicating the ranking of a hand."
     ranks = card_ranks(hand) 
     if straight(ranks) and flush(hand):
-        return (8, max(ranks))
+        return (8, max(ranks)) 
     elif kind(4, ranks):
-        return (7, kind(4, ranks), kind(1, ranks))
+        return (7, kind(4, ranks), kind(1, ranks)) 
     elif kind(3, ranks) and kind(2, ranks):
         return (6, kind(3, ranks), kind(2, ranks))
     elif flush(hand):
