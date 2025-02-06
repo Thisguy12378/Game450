@@ -26,9 +26,9 @@ def test_scenario(scenario):
     expected_response = scenario["response"]
 
     customer_template_file = 'lab04/test/customer_chat.json'
-    customer = TemplateChat.from_file(customer_template_file, sign='Pulin', ask=ask)
+    customer = TemplateChat.from_file(customer_template_file, sign='Collin', ask=ask)
     lab04_params['inventory']= inventory
-    trader = TemplateChat.from_file(**lab04_params)
+    trader = TemplateChat.from_file(**lab04_params,template_file="lab04/lab04_trader_chat.json")
     chat_generator = trader.start_chat()
     print(next(chat_generator))
     while True:
