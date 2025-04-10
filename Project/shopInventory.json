@@ -1,0 +1,99 @@
+{
+    "shops": {
+        "General Store": {
+            "items": [
+                {"name": "Rations (1 day)", "price": 5, "category": "Consumable"},
+                {"name": "Torch", "price": 1, "category": "Utility"},
+                {"name": "Rope (50ft)", "price": 10, "category": "Utility"},
+                {"name": "Backpack", "price": 20, "category": "Gear"},
+                {"name": "Flint and Steel", "price": 5, "category": "Utility"},
+                {"name": "Bedroll", "price": 15, "category": "Gear"},
+                {"name": "Waterskin", "price": 10, "category": "Utility"},
+                {"name": "Lantern", "price": 30, "category": "Utility"},
+                {"name": "Oil Flask", "price": 5, "category": "Consumable"},
+                {"name": "Climber's Kit", "price": 80, "category": "Utility"},
+                {"name": "Tent (2-person)", "price": 50, "category": "Gear"},
+                {"name": "Healer's Kit", "price": 75, "category": "Consumable"}
+            ]
+        },
+        "Blacksmith": {
+            "items": [
+                {"name": "Dagger", "price": 25, "category": "Weapon"},
+                {"name": "Short Sword", "price": 100, "category": "Weapon"},
+                {"name": "Longsword", "price": 150, "category": "Weapon"},
+                {"name": "Greatsword", "price": 300, "category": "Weapon"},
+                {"name": "Mace", "price": 80, "category": "Weapon"},
+                {"name": "Warhammer", "price": 250, "category": "Weapon"},
+                {"name": "Spear", "price": 75, "category": "Weapon"},
+                {"name": "Halberd", "price": 200, "category": "Weapon"},
+                {"name": "Chain Mail", "price": 200, "category": "Armor"},
+                {"name": "Plate Armor", "price": 1500, "category": "Armor"},
+                {"name": "Leather Armor", "price": 50, "category": "Armor"},
+                {"name": "Studded Leather Armor", "price": 200, "category": "Armor"},
+                {"name": "Shield", "price": 50, "category": "Armor"},
+                {"name": "Arrow (20)", "price": 10, "category": "Ammunition"},
+                {"name": "Crossbow Bolts (20)", "price": 15, "category": "Ammunition"}
+            ]
+        },
+        "Magic Shop": {
+            "items": [
+                {"name": "Potion of Healing", "price": 50, "category": "Potion"},
+                {"name": "Potion of Greater Healing", "price": 200, "category": "Potion"},
+                {"name": "Potion of Invisibility", "price": 500, "category": "Potion"},
+                {"name": "Potion of Fire Resistance", "price": 300, "category": "Potion"},
+                {"name": "Scroll of Fireball", "price": 500, "category": "Scroll"},
+                {"name": "Scroll of Lightning Bolt", "price": 600, "category": "Scroll"},
+                {"name": "Scroll of Mage Armor", "price": 150, "category": "Scroll"},
+                {"name": "Wand of Magic Missiles", "price": 1000, "category": "Magic Item"},
+                {"name": "Ring of Protection", "price": 2000, "category": "Magic Item"},
+                {"name": "Cloak of Elvenkind", "price": 2500, "category": "Magic Item"},
+                {"name": "Bracers of Defense", "price": 3000, "category": "Magic Item"},
+                {"name": "Bag of Holding", "price": 4000, "category": "Magic Item"},
+                {"name": "Pearl of Power", "price": 5000, "category": "Magic Item"}
+            ]
+        },
+        "Alchemist": {
+            "items": [
+                {"name": "Alchemist's Fire", "price": 50, "category": "Throwable"},
+                {"name": "Acid Flask", "price": 25, "category": "Throwable"},
+                {"name": "Potion of Poison Resistance", "price": 150, "category": "Potion"},
+                {"name": "Potion of Antidote", "price": 100, "category": "Potion"},
+                {"name": "Potion of Speed", "price": 500, "category": "Potion"},
+                {"name": "Potion of Darkvision", "price": 250, "category": "Potion"},
+                {"name": "Incense of Meditation", "price": 300, "category": "Consumable"},
+                {"name": "Vial of Basilisk Blood", "price": 1000, "category": "Rare Material"}
+            ]
+        },
+        "Enchanter's Workshop": {
+            "items": [
+                {"name": "Enchanted Dagger (+1)", "price": 1200, "category": "Weapon"},
+                {"name": "Enchanted Longsword (+2)", "price": 5000, "category": "Weapon"},
+                {"name": "Shield of Resistance", "price": 4000, "category": "Armor"},
+                {"name": "Boots of Striding and Springing", "price": 3500, "category": "Magic Item"},
+                {"name": "Ring of Water Walking", "price": 4500, "category": "Magic Item"},
+                {"name": "Wand of the War Mage (+1)", "price": 6000, "category": "Magic Item"},
+                {"name": "Rod of the Pact Keeper (+2)", "price": 7000, "category": "Magic Item"}
+            ]
+        },
+        "Exotic Pet Store": {
+            "items": [
+                {"name": "Raven Familiar", "price": 100, "category": "Pet"},
+                {"name": "Owl Familiar", "price": 150, "category": "Pet"},
+                {"name": "Miniature Griffon", "price": 5000, "category": "Pet"},
+                {"name": "Trained Falcon", "price": 1000, "category": "Pet"},
+                {"name": "Almiraj (Horned Rabbit)", "price": 1200, "category": "Pet"},
+                {"name": "Tame Giant Spider", "price": 7000, "category": "Pet"}
+            ]
+        },
+        "Traveling Merchant": {
+            "items": [
+                {"name": "Mysterious Map", "price": 500, "category": "Quest Item"},
+                {"name": "Cursed Amulet", "price": 750, "category": "Curio"},
+                {"name": "Unmarked Potion", "price": 300, "category": "Potion"},
+                {"name": "Strange Coin", "price": 200, "category": "Curio"},
+                {"name": "Lucky Rabbit's Foot", "price": 100, "category": "Curio"},
+                {"name": "Worn Battle Standard", "price": 600, "category": "Artifact"}
+            ]
+        }
+    }
+}

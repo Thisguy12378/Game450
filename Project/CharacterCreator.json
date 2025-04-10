@@ -1,0 +1,14 @@
+{
+    "model": "llama3.2",
+    "options": {
+      "temperature": 0,
+      "max_tokens": 500
+    },
+    "messages": [
+      {
+        "role": "system",
+        "content": "Your job is to be a character creator for Dungeons and Dragons..."
+      }
+    ]
+  }
+  
