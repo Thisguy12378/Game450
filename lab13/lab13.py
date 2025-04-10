@@ -5,8 +5,31 @@ from types import MethodType
 
 # TODO Write your reward functions here
 def myreward(state):
-    # Custom reward function
-    pass
+    goal_state = 15
+    hole_states = [5, 7, 11, 12]
+
+    if state == goal_state:
+        return 10.0
+    elif state in hole_states:
+        return -10.0
+    else:
+        return -0.1
+    
+def myreward2(state):
+    holeStates = [5, 7, 11, 12]
+
+    if state in holeStates:
+        return -10.0
+    else:
+        return 0.0
+    
+def myreward3(state):
+    goalState = 15
+
+    if state == goalState:
+        return 10.0
+    else:
+        return -1.0
 
 # Create environment
 
@@ -17,7 +40,7 @@ env = gym.make('FrozenLake-v1', render_mode='rgb_array', desc=None, map_name="4x
 def transition_function(self, action):
     # perform and update
     state, reward, done, truncated, info = self.internal_step(action)
-    reward = myreward(state) # TODO you can change this line to use your custom reward function
+    reward = myreward3(state) # TODO you can change this line to use your custom reward function
     return state, reward, done, truncated, info
 
 # Transition function in gymnasium environments is called step
