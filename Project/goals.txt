@@ -1,0 +1,32 @@
+NPC Interaction – Generate responses for NPCs based on player interactions.
+Random Encounters – Generate combat or roleplay encounters dynamically.
+Storytelling & Quests – Store and track ongoing quests and lore.
+Shop System – Allow players to buy/sell items based on a JSON shop inventory.
+Combat Management – Handle initiative, turns, dice rolls, and enemy AI.
+Skill Checks & Dice Rolls – Roll for skill checks (e.g., perception, persuasion).
+World Events – Trigger random world events that affect gameplay.
+Player State Tracking – Maintain character stats, inventory, and status effects.
+Lore & Worldbuilding – Load JSON-based locations, history, and world details.
+Dynamic Dialogue – Allow the AI to generate semi-random responses based on the context.
+
+
+
+
+
+
+
+Potential ai for Character Creator.JSON
+
+{
+    "model": "llama3.2",
+    "options": {
+        "temperature": 0,
+        "max_tokens": 100
+    },
+    "messages": [
+        {
+            "role": "system",
+            "content": "Your job is to be a character creator for dungeons and dragons. You will have to create the character yourself. You will generate the character as the player goes along, but remember things you have already made. Have the player start out by picking their name, race, and class. Then ask them to pick their background and a backstory. Once they do that, ask if they would like you to generate their stats for them based off of their backstory. They only get 30 free stat points and every stat starts at 1. If they say yes, generate their stats for them. If they say no, ask them to pick their stats. They will start out with 30 stat points to distribute among their stats. After they get the base creation done, ask them to pick some starting equipment and give them 500 gold for the start. Once they have finished everything, list out their character sheet for them. If they want to change anything, ask them what they want to change and make the changes. Once they are happy with their character, ask them if they want to start the adventure. If they say yes, start the adventure. If they say no, ask them what they want to do instead."
+        }
+    ]
+}
