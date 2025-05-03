@@ -1,38 +1,70 @@
 from pathlib import Path
 import sys
-sys.path.append(str(Path(__file__).parents[1]))
 import json
-
-import random
 from util.llm_utils import run_console_chat, tool_tracker
+from Character import Character
+from AI.Python.CharacterAI import runCharacterAI
+from AI.Python.GuideAI import runGuideAI
+from AI.Python.BattleAI import runBattleAI
+from AI.Python.ShopkeeperAI import runShopkeeperAI
 
-Characterjson = Path(__file__).parent / "Character.json"
-Creatorjson = Path(__file__).parent / "CharacterCreator.json"
+# Define paths to JSON files
 
-def loadCharacterData(filePath):
-    try:
-        with open(filePath, 'r') as f:
-            return json.load(f)
-    except Exception as e:
-        print(f"Error loading character data: {e}")
-        return None
+def game_loop():
+    """Main game loop to manage AI switching dynamically."""
+    print("Welcome to the game!")
+    current_ai = "GuideAI"  # Start with the Guide AI
 
-def saveCharacterData(filePath, data):
-    try:
-        with open(filePath, 'w') as f:
-            json.dump(data, f, indent=4)
-    except Exception as e:
-        print(f"Error saving character data: {e}")
+    while True:
+        if current_ai == "GuideAI":
+            user_input = input("You: ")
+            if user_input.lower() == "quit" or user_input.lower() == "exit":
+                print("Exiting the game. Goodbye!")
+                break
 
-def CreateCharacter():
-    response = run_console_chat(Creatorjson, end_regex=r'CHARACTER CREATED')
+            guide_response = runGuideAI(user_input)
+            print(f"Guide AI: {guide_response}")
 
-    try:
-        character = json.loads(response)
-    except json.JSONDecodeError:
-        print("Error decoding JSON response")
+            # Check for specific triggers in the Guide AI's response
+            if "encounter an enemy" in guide_response.lower():
+                print("Switching to Battle AI...")
+                current_ai = "BattleAI"
+            elif user_input.lower() == "shop":
+                print("Switching to Shopkeeper AI...")
+                current_ai = "ShopkeeperAI"
+            elif user_input.lower() == "character":
+                print("Switching to Character AI...")
+                current_ai = "CharacterAI"
 
-    saveCharacterData(Characterjson, character)
+        elif current_ai == "BattleAI":
+            user_input = input("You: ")
+            if user_input.lower() == "back":
+                print("Returning to Guide AI...")
+                current_ai = "GuideAI"
+                continue
+
+            battle_response = runBattleAI(user_input)
+            print(f"Battle AI: {battle_response}")
+
+        elif current_ai == "ShopkeeperAI":
+            user_input = input("You: ")
+            if user_input.lower() == "back":
+                print("Returning to Guide AI...")
+                current_ai = "GuideAI"
+                continue
+
+            shop_response = runShopkeeperAI(user_input)
+            print(f"Shopkeeper AI: {shop_response}")
+
+        elif current_ai == "CharacterAI":
+            user_input = input("You: ")
+            if user_input.lower() == "back":
+                print("Returning to Guide AI...")
+                current_ai = "GuideAI"
+                continue
+
+            character_response = runCharacterAI(user_input)
+            print(f"Character AI: {character_response}")
 
 if __name__ == "__main__":
-    CreateCharacter()
+    game_loop()

@@ -1,0 +1,100 @@
+{
+    "shops": {
+        "General Store": {
+            "items": [
+                {"name": "Rations (1 day)", "price": 5, "category": "Consumable", "stats": {"vitality": 0}, "consumable": true},
+                {"name": "Torch", "price": 1, "category": "Utility", "stats": {}},
+                {"name": "Rope (50ft)", "price": 10, "category": "Utility", "stats": {}},
+                {"name": "Backpack", "price": 20, "category": "Gear", "stats": {}},
+                {"name": "Flint and Steel", "price": 5, "category": "Utility", "stats": {}},
+                {"name": "Bedroll", "price": 15, "category": "Gear", "stats": {}},
+                {"name": "Waterskin", "price": 10, "category": "Utility", "stats": {}},
+                {"name": "Lantern", "price": 30, "category": "Utility", "stats": {}},
+                {"name": "Oil Flask", "price": 5, "category": "Consumable", "stats": {}, "consumable": true},
+                {"name": "Climber's Kit", "price": 80, "category": "Utility", "stats": {}},
+                {"name": "Tent (2-person)", "price": 50, "category": "Gear", "stats": {}},
+                {"name": "Healer's Kit", "price": 75, "category": "Consumable", "stats": {}, "consumable": true}
+            ]
+        },
+        "Blacksmith": {
+            "items": [
+                {"name": "Dagger", "price": 25, "category": "Weapon", "stats": {"damage": 5}, "twoHanded": false, "slot": "mainHand"},
+                {"name": "Short Sword", "price": 100, "category": "Weapon", "stats": {"damage": 10}, "twoHanded": false, "slot": "mainHand"},
+                {"name": "Longsword", "price": 150, "category": "Weapon", "stats": {"damage": 15}, "twoHanded": false, "slot": "mainHand"},
+                {"name": "Greatsword", "price": 300, "category": "Weapon", "stats": {"damage": 20}, "twoHanded": true, "slot": "mainHand"},
+                {"name": "Mace", "price": 80, "category": "Weapon", "stats": {"damage": 8}, "twoHanded": false, "slot": "mainHand"},
+                {"name": "Warhammer", "price": 250, "category": "Weapon", "stats": {"damage": 18}, "twoHanded": true, "slot": "mainHand"},
+                {"name": "Spear", "price": 75, "category": "Weapon", "stats": {"damage": 7}, "twoHanded": true, "slot": "mainHand"},
+                {"name": "Halberd", "price": 200, "category": "Weapon", "stats": {"damage": 16}, "twoHanded": true, "slot": "mainHand"},
+                {"name": "Chain Mail", "price": 200, "category": "Armor", "stats": {"vitality": 5}, "slot": "armor"},
+                {"name": "Plate Armor", "price": 1500, "category": "Armor", "stats": {"vitality": 10}, "slot": "armor"},
+                {"name": "Leather Armor", "price": 50, "category": "Armor", "stats": {"vitality": 2}, "slot": "armor"},
+                {"name": "Studded Leather Armor", "price": 200, "category": "Armor", "stats": {"vitality": 4}, "slot": "armor"},
+                {"name": "Shield", "price": 50, "category": "Armor", "stats": {"vitality": 3}, "slot": "offHand"},
+                {"name": "Arrow (20)", "price": 10, "category": "Ammunition", "stats": {}},
+                {"name": "Crossbow Bolts (20)", "price": 15, "category": "Ammunition", "stats": {}}
+            ]
+        },
+        "Magic Shop": {
+            "items": [
+                {"name": "Potion of Healing", "price": 50, "category": "Potion", "stats": {"health": 25}, "consumable": true},
+                {"name": "Potion of Mana", "price": 100, "category": "Potion", "stats": {"mana": 20}, "consumable": true},
+                {"name": "Potion of Greater Healing", "price": 200, "category": "Potion", "stats": {"health": 50}, "consumable": true},
+                {"name": "Potion of Invisibility", "price": 500, "category": "Potion", "stats": {}, "consumable": true},
+                {"name": "Potion of Fire Resistance", "price": 300, "category": "Potion", "stats": {}, "consumable": true},
+                {"name": "Scroll of Fireball", "price": 500, "category": "Scroll", "stats": {}, "consumable": true},
+                {"name": "Scroll of Lightning Bolt", "price": 600, "category": "Scroll", "stats": {}, "consumable": true},
+                {"name": "Scroll of Mage Armor", "price": 150, "category": "Scroll", "stats": {}, "consumable": true},
+                {"name": "Wand of Magic Missiles", "price": 1000, "category": "Magic Item", "stats": {"damage": 15}, "slot": "mainHand"},
+                {"name": "Ring of Protection", "price": 2000, "category": "Magic Item", "stats": {"vitality": 2}, "slot": "accessory"},
+                {"name": "Cloak of Elvenkind", "price": 2500, "category": "Magic Item", "stats": {"agility": 3}, "slot": "armor"},
+                {"name": "Bracers of Defense", "price": 3000, "category": "Magic Item", "stats": {"vitality": 4}, "slot": "armor"},
+                {"name": "Bag of Holding", "price": 4000, "category": "Magic Item", "stats": {}},
+                {"name": "Pearl of Power", "price": 5000, "category": "Magic Item", "stats": {"intelligence": 2}, "slot": "accessory"}
+            ]
+        },
+        "Alchemist": {
+            "items": [
+                {"name": "Alchemist's Fire", "price": 50, "category": "Throwable", "consumable": true},
+                {"name": "Acid Flask", "price": 25, "category": "Throwable", "consumable": true},
+                {"name": "Potion of Poison Resistance", "price": 150, "category": "Potion", "consumable": true},
+                {"name": "Potion of Antidote", "price": 100, "category": "Potion", "consumable": true},
+                {"name": "Potion of Speed", "price": 500, "category": "Potion", "consumable": true},
+                {"name": "Potion of Darkvision", "price": 250, "category": "Potion", "consumable": true},
+                {"name": "Incense of Meditation", "price": 300, "category": "Consumable", "consumable": true},
+                {"name": "Vial of Basilisk Blood", "price": 1000, "category": "Rare Material"}
+            ]
+        },
+        "Enchanter's Workshop": {
+            "items": [
+                {"name": "Enchanted Dagger (+1)", "price": 1200, "category": "Weapon", "twoHanded": false},
+                {"name": "Enchanted Longsword (+2)", "price": 5000, "category": "Weapon", "twoHanded": false},
+                {"name": "Shield of Resistance", "price": 4000, "category": "Armor"},
+                {"name": "Boots of Striding and Springing", "price": 3500, "category": "Magic Item"},
+                {"name": "Ring of Water Walking", "price": 4500, "category": "Magic Item"},
+                {"name": "Wand of the War Mage (+1)", "price": 6000, "category": "Magic Item"},
+                {"name": "Rod of the Pact Keeper (+2)", "price": 7000, "category": "Magic Item"}
+            ]
+        },
+        "Exotic Pet Store": {
+            "items": [
+                {"name": "Raven Familiar", "price": 100, "category": "Pet"},
+                {"name": "Owl Familiar", "price": 150, "category": "Pet"},
+                {"name": "Miniature Griffon", "price": 5000, "category": "Pet"},
+                {"name": "Trained Falcon", "price": 1000, "category": "Pet"},
+                {"name": "Almiraj (Horned Rabbit)", "price": 1200, "category": "Pet"},
+                {"name": "Tame Giant Spider", "price": 7000, "category": "Pet"}
+            ]
+        },
+        "Traveling Merchant": {
+            "items": [
+                {"name": "Mysterious Map", "price": 500, "category": "Quest Item"},
+                {"name": "Cursed Amulet", "price": 750, "category": "Curio"},
+                {"name": "Unmarked Potion", "price": 300, "category": "Potion"},
+                {"name": "Strange Coin", "price": 200, "category": "Curio"},
+                {"name": "Lucky Rabbit's Foot", "price": 100, "category": "Curio"},
+                {"name": "Worn Battle Standard", "price": 600, "category": "Artifact"}
+            ]
+        }
+    }
+}

@@ -1,0 +1,124 @@
+##Goblin
+Small, sneaky creatures that use ambush tactics.
+Health: 7
+Damage: Low
+
+##Skeleton
+Undead warriors animated by dark magic.
+Health: 13
+Damage: Moderate
+
+##Bandit
+Criminals who fight in ragtag groups.
+Health: 12
+Damage: Moderate
+
+##Orc
+Savage brutes who thrive on chaos and battle.
+Health: 30
+Damage: High
+
+##Wight
+Undead beings that drain the life of others.
+Health: 45
+Damage: Moderate
+
+##Zombie
+Slow but relentless undead, hard to stop.
+Health: 22
+Damage: Low
+
+##Owlbear
+A vicious predator with the head of an owl and the body of a bear.
+Health: 59
+Damage: Very High
+
+##Troll
+Large creatures with regenerative powers.
+Health: 84
+Damage: High
+
+##Vampire
+Cunning predators who feed on blood.
+Health: 112
+Damage: Very High
+
+##Mimic
+Deceptive monsters that disguise as objects.
+Health: 58
+Damage: High
+
+##Young Red Dragon
+A fearsome dragon with fiery breath.
+Health: 133
+Damage: Extremely High
+
+##Mind Flayer
+Psionic creatures that feed on brains.
+Health: 71
+Damage: Moderate
+
+##Kobold
+Tiny, weak lizardfolk who attack in groups.
+Health: 5
+Damage: Low
+
+##Hobgoblin
+Disciplined and strategic goblinoid warriors.
+Health: 39
+Damage: Moderate
+
+##Gnoll
+Hyena-like savages driven by bloodlust.
+Health: 49
+Damage: High
+
+##Giant Spider
+Stealthy predators that paralyze prey.
+Health: 26
+Damage: Moderate
+
+##Harpy
+Winged creatures that lure victims with song.
+Health: 38
+Damage: Moderate
+
+##Will-o'-Wisp
+Floating undead lights that shock and confuse.
+Health: 22
+Damage: High
+
+##Giant Scorpion
+Venomous beasts with deadly pincers and tails.
+Health: 52
+Damage: Very High
+
+##Basilisk
+A reptilian monster whose gaze turns flesh to stone.
+Health: 67
+Damage: High
+
+##Lich
+A powerful undead spellcaster seeking immortality.
+Health: 135
+Damage: Extremely High
+
+##Beholder
+A floating orb of eyes and destructive magic.
+Health: 180
+Damage: Extremely High
+
+##Yeti
+A towering beast from icy mountains.
+Health: 93
+Damage: High
+
+##Bugbear
+Large goblinoids who hit hard and fast.
+Health: 45
+Damage: High
+
+##Shadow
+Dark spirits that weaken the living.
+Health: 16
+Damage: Moderate

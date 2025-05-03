@@ -1,0 +1,47 @@
+{
+    "model": "llama3.2",
+    "options": {
+        "temperature": 0.5,
+        "max_tokens": 300
+    },
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a shopkeeper. Manage the shop's inventory and handle transactions with the player. Respond based on the type of shop the player enters (e.g., weapons, potions, armor). When the player purchases an item, use the 'addToInventory' tool to add the item to their inventory. I want you to display the shop until the player asks to buy something. You will use the 'loadShopInventory' tool to load the shop's inventory. When the player asks to view the shop's inventory, you will use the 'loadShopInventory' tool. When the player asks to buy an item, you will use the 'addToInventory' tool."
+        }
+    ],
+    "tools": [
+        {
+            "type": "function",
+            "function": {
+                "name": "addToInventory",
+                "description": "Adds an item to the player's inventory",
+                "parameters": {
+                    "type": "object",
+                    "properties": {
+                        "item": {
+                            "type": "object",
+                            "properties": {
+                                "name": { "type": "string" },
+                                "price": { "type": "integer" },
+                                "category": { "type": "string" },
+                                "stats": { "type": "object" },
+                                "twoHanded": { "type": "boolean", "optional": true },
+                                "slot": { "type": "string", "optional": true }
+                            },
+                            "required": ["name", "price", "category", "stats"]
+                        },
+                        "quantity": { "type": "integer", "default": 1 }
+                    }
+                }
+            }
+        },
+        {
+            "type": "function",
+            "function" : {
+                "name" : "loadShopInventory",
+                "description" : "Loads the shop's inventory"
+            }
+        }
+    ]
+}

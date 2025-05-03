@@ -1,0 +1,131 @@
+{
+    "model": "llama3.2",
+    "options": {
+        "temperature": 0,
+        "max_tokens": 200
+    },
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are responsible for updating the player's character. Handle leveling up, stat allocation, inventory updates, and experience gains after battles. When the player asks to update their character, you will use the 'updateCharacter' tool. When the player asks to view their inventory, you will use the 'viewInventory' tool. When the player asks to view their equipment, you will use the 'viewEquipment' tool. When the player asks to add an item, you will use the 'addItem' tool. When the player asks to remove an item, you will use the 'removeItem' tool. When the player asks to equip an item, you will use the 'equipItem' tool. When the player asks to unequip an item, you will use the 'unequipItem' tool."
+        }
+    ],
+    "tools": [
+        {
+            "type" : "function",
+            "function": {
+                "name": "updateCharacter",
+                "description" : "Updates the character's stats",
+                "parameters": {
+                    "type": "object",
+                    "properties":{
+                        "stat":{"type":"string"},
+                        "value":{"type":"integer"}
+                    }
+                }
+            }  
+        },
+        {
+            "type" : "function",
+            "function": {
+                "name" : "showCharacter",
+                "description" : "Shows the character's stats"
+            }
+        },
+        {
+            "type" : "function",
+            "function": {
+                "name" : "equipItem",
+                "description" : "Equips an item to the character",
+                "parameters" : {
+                    "type" : "object",
+                    "properties" : {
+                        "name" : {"type" :"string"},
+                        "category" : {"type" : "string"},
+                        "stats" : {
+                            "type" : "object"
+                        },
+                        "twoHanded" : {"type" : "boolean"},
+                        "slot" : {"type" : "string", "optional" : true}
+                    },
+                    "required" : ["name", "category", "stats"]
+                    
+                }
+            }
+        },
+        {
+            "type" : "function",
+            "function": {
+                "name" : "addItem",
+                "description" : "Adds an item to the character's inventory",
+                "parameters" : {
+                    "type" : "object",
+                    "properties" : {
+                        "name" : {"type" :"string"},
+                        "category" : {"type" : "string"},
+                        "stats" : {
+                            "type" : "object"
+                        },
+                        "twoHanded" : {"type" : "boolean"},
+                        "slot" : {"type" : "string", "optional" : true}
+                    },
+                    "required" : ["name", "category", "stats"]
+                }
+            }
+        },
+        {
+            "type" : "function",
+            "function": {
+                "name" : "unequipItem",
+                "description" : "Unequips an item from the character",
+                "parameters" : {
+                    "type" : "object",
+                    "properties" : {
+                        "name" : {"type" :"string"},
+                        "category" : {"type" : "string"},
+                        "stats" : {
+                            "type" : "object"
+                        },
+                        "twoHanded" : {"type" : "boolean"},
+                        "slot" : {"type" : "string", "optional" : true}
+                    },
+                    "required" : ["name", "category", "stats"]
+                }
+            }
+        },
+        {
+            "type" : "function",
+            "function" : {
+                "name" : "viewInventory",
+                "description" : "Views the character's inventory"                
+            }
+        },
+        {
+            "type" : "function",
+            "function" : {
+                "name" : "viewEquipment",
+                "description" : "Views the character's equipment"
+            }
+        },
+        {
+            "type" : "function",
+            "function" : {
+                "name" : "removeItem",
+                "description" : "Removes an item from the character's inventory",
+                "parameters" : {
+                    "type" : "object",
+                    "properties" : {
+                        "name" : {"type" :"string"},
+                        "category" : {"type" : "string"},
+                        "stats" : {
+                            "type" : "object"
+                        },
+                        "twoHanded" : {"type" : "boolean"},
+                        "slot" : {"type" : "string", "optional" : true}
+                    },
+                    "required" : ["name", "category", "stats"]
+                }
+            }
+        }
+    ]
+}

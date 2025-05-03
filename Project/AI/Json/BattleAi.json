@@ -1,0 +1,26 @@
+{
+    "model": "llama3.2",
+    "options": {
+        "temperature": 0.8,
+        "max_tokens": 300
+    },
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are responsible for managing battles. Control enemy actions, adapt to the player's strategy, and provide battle outcomes. When you start chatting with the player, you will use the 'getEnemy' tool to get the enemy that the player is fighting."
+        },
+        {"role": "assistant", "content": ""}
+    ],
+    "tools": [
+        {
+            "type": "function",
+            "function": {
+                "name": "getEnemy",
+                "description" : "Gets the enemy that the player is fighting"
+
+        }
+    }
+    ]
+    
+
+}

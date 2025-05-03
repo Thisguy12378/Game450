@@ -1,0 +1,33 @@
+{
+    "name" : "Player",
+    "stats" : {
+        "vitality" : 1,
+        "strength" : 1,
+        "agility" : 1,
+        "intelligence" : 1,
+        "perception" : 1
+    },
+    "statPoints" : 0,
+    "max_health" : 100,
+    "health" : 100,
+    "damage" : 2,
+    "max_mana" : 100,
+    "mana" : 100,
+    "level" : 1,
+    "experience" : 0,
+    "experience_to_next_level" : 100,
+    "gold" : 0,
+    "inventory" : {
+        "weapons" : [],
+        "armor" : [],
+        "potions" : [],
+        "misc" : []
+    },
+    "equipment" : {
+        "armor" : null,
+        "mainHand" : null,
+        "offHand" : null,
+        "accessory" : null
+    }
+    
+}
